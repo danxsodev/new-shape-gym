@@ -1,0 +1,195 @@
+@import url(./style.css);
+@import url(./form.css);
+
+:root {
+    font-size: 62.5%;
+    
+    --primary-color: #B5D43B;
+    --secondary-color: #161616;
+    --bg-color: #D3D3D3;
+    --stats-color: #363636e0;
+    --card-and-form-color: #E7E7E7;
+    --input-color: #363636;
+    --text-color: #262626;
+    --text-color-alternative: #E4E4E4;
+    --height-header: 7.2rem;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    overflow: overlay;
+    overflow-y: auto;
+    background-color: var(--bg-color);
+}
+
+header {
+    width: 100%;
+    height: var(--height-header);
+    position: fixed;
+    grid-area: header;
+    top: 0;
+    display: flex;
+    z-index: 100;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav div.logo {
+    height: 4.8rem;
+}
+
+nav div.logo img {
+    margin-inline: 2.4rem;
+}
+
+nav .menu ul.list-menu-options {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    top: var(--height-header);
+    right: 0rem;
+    background-color: var(--secondary-color);
+    transition: 300ms;
+    z-index: 1000;
+    height: 0rem;
+    visibility: hidden;
+    overflow-y: hidden;
+}
+
+nav.menu-expanded .menu ul.list-menu-options{
+    height: calc(100vh - var(--height-header));
+    visibility: visible;
+    overflow-y: auto;
+    transform: translateY(100);
+    pointer-events: painted;
+}
+
+.menu ul.list-menu-options li a {
+    margin-top: 4.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 2.4rem;
+}
+
+button#btn-burguer {
+    margin-inline: 2.4rem;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    background: none;
+    align-items: center;
+    transition: 200ms ease-in-out;
+}
+
+button#btn-burguer svg path {
+    fill: var(--primary-color);
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding-inline: 2.4rem;
+    grid-area: main;
+    margin-top: calc(var(--height-header) + 4rem);
+}
+
+footer {
+    width: 100%;
+    padding-block: 3.2rem;
+    grid-area: footer;
+    bottom: 0rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color-alternative);
+}
+
+footer section.contact div.content-contact span {
+    font-size: 2rem;
+}
+
+footer section.contact div.content-contact ul.list-contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.6rem;
+    margin-bottom: 2.4rem;
+    
+}
+
+footer section.contact div.content-contact ul.list-contact li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    gap: 0.8rem;
+    color: var(--text-color-alternative);
+}
+
+footer section.contact div.content-contact ul.list-contact li a svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+footer section.social-media ul.content-social-media {
+    margin-bottom: 2.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+footer section.social-media ul.content-social-media li {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+footer section.social-media ul.content-social-media li a svg {
+    align-items: center;
+}

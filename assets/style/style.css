@@ -1,0 +1,221 @@
+:root {
+    font-size: 62.5%;
+    
+    --primary-color: #B5D43B;
+    --primary-color-alternative: #859C2A;
+    --secondary-color: #161616;
+    --bg-color: #D3D3D3;
+    --stats-color: #363636e0;
+    --card-and-form-color: #E7E7E7;
+    --input-color: #363636;
+    --text-color: #262626;
+    --text-color-alternative: #E4E4E4;
+    --height-header: 7.2rem;
+
+}
+
+section.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.home h1 {
+    font-size: 2.4rem;
+}
+
+section.home div.slideshow {
+    width: 90%;
+    height: 45%;     
+    margin-top: 6.4rem;       
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+section.home div.slideshow img {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    position: absolute;
+    border-radius: 0.8rem;
+    transition: opacity 200ms ease-out;
+}
+
+section.about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;;
+    align-items: center;
+}
+
+section.about h2 {
+    font-size: 1.8rem;
+}
+
+section.about div.container-content-stats {
+    width: 80%;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4.8rem;
+    gap: 4rem;
+    border-radius: 0.8rem;
+    background-color: var(--stats-color);
+    color: var(--primary-color);
+    
+}
+
+section.about div.container-content-stats .stat {
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+section.about div.container-content-stats .stat span{
+    font-size: 3rem;
+}
+
+section.about div.container-content-stats .stat p{
+    font-size: 1.8rem;
+}
+
+section.services {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.services h1 {
+    margin-block: 2.4rem;
+    font-size: 2.4rem;
+}
+
+section.services div.container-content-cards-service {
+    margin-block: 2.4rem;
+    margin-inline: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+section.services div.container-content-cards-service .card-service{
+    padding-block: 1.6rem;
+    padding-inline: 0.8rem;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 15px var(--stats-color);
+    background-color: var(--card-and-form-color);
+    color: var(--text-color);
+    transition: 300ms ease-in-out;
+}
+
+section.services div.container-content-cards-service .card-service:hover {
+    border: 0.2rem var(--primary-color) solid;
+    cursor: pointer;
+}
+
+section.services div.container-content-cards-service .card-service h3 {
+    font-size: 1.8rem;
+}
+
+section.services div.container-content-cards-service .card-service img {
+    width: 100%;
+    margin-top: 2.4rem;
+    border-radius: 0.8rem;
+}
+
+section.plans {
+    width: 100%;
+    height: 100vh;
+    margin-top: 56rem;
+    margin-bottom: 96rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.plans h2 {
+    margin-block: 2.4rem;
+    font-size: 2.4rem;
+}
+
+section.plans div.container-content-cards-plans {
+    margin-block: 2.4rem;
+    margin-inline: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+section.plans div.container-content-cards-plans .card-plan {
+    width: 100%;
+    padding-block: 1.6rem;
+    padding-inline: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 15px var(--stats-color);
+    background-color: var(--card-and-form-color);
+    color: var(--text-color);
+    transition: 300ms ease-in-out;
+}
+
+section.plans div.container-content-cards-plans .card-plan .content-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+section.plans div.container-content-cards-plans .card-plan .content-card span.name-plan {
+    font-size: 2.4rem;
+    margin-block: 2.4rem;
+}
+
+section.plans div.container-content-cards-plans .card-plan .content-card span.price-plan {
+    font-size: 2rem;
+    color: var(--primary-color-alternative);
+}
+
+section.plans div.container-content-cards-plans .card-plan .content-card span.price-plan .month {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+section.plans div.container-content-cards-plans .card-plan .content-card span.divider {
+    width: 100%;
+    margin-block: 2.4rem;
+    border: 0.1rem solid var(--secondary-color);
+}
+
+section.plans div.container-content-cards-plans .card-plan details.benefits-plan ul.list-content-benefits li {
+    padding-block: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
