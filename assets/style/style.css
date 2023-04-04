@@ -5,10 +5,12 @@
     --primary-color-alternative: #859C2A;
     --secondary-color: #161616;
     --bg-color: #D3D3D3;
-    --stats-color: #363636e0;
+    --stats-color: #363636;
+    --text-stats-color: #B5D43B;
     --card-and-form-color: #E7E7E7;
     --input-color: #363636;
     --text-color: #262626;
+    --btn-submit-color: #B5D43B;
     --text-color-alternative: #E4E4E4;
     --height-header: 7.2rem;
 
@@ -38,8 +40,8 @@ section.home div.slideshow {
 }
 
 section.home div.slideshow img {
-    width: 100%;
-    height: 75%;
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     position: absolute;
     border-radius: 0.8rem;
@@ -69,7 +71,7 @@ section.about div.container-content-stats {
     gap: 4rem;
     border-radius: 0.8rem;
     background-color: var(--stats-color);
-    color: var(--primary-color);
+    color: var(--text-stats-color);
     
 }
 
@@ -88,6 +90,7 @@ section.about div.container-content-stats .stat span{
 
 section.about div.container-content-stats .stat p{
     font-size: 1.8rem;
+    color: #E7E7E7;
 }
 
 section.services {
@@ -105,16 +108,15 @@ section.services h1 {
 
 section.services div.container-content-cards-service {
     margin-block: 2.4rem;
-    margin-inline: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    width: 100%;
+    display: grid;
     gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 section.services div.container-content-cards-service .card-service{
+    width: 100%;
+    height: 100%;
     padding-block: 1.6rem;
     padding-inline: 0.8rem;
     text-align: center;
@@ -144,8 +146,7 @@ section.services div.container-content-cards-service .card-service img {
 section.plans {
     width: 100%;
     height: 100vh;
-    margin-top: 56rem;
-    margin-bottom: 96rem;
+    margin-block: 72rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,17 +159,15 @@ section.plans h2 {
 
 section.plans div.container-content-cards-plans {
     margin-block: 2.4rem;
-    margin-inline: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    width: 100%;
+    display: grid;
     gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 section.plans div.container-content-cards-plans .card-plan {
     width: 100%;
+    height: 100%;
     padding-block: 1.6rem;
     padding-inline: 0.8rem;
     display: flex;
@@ -208,6 +207,10 @@ section.plans div.container-content-cards-plans .card-plan .content-card span.di
     width: 100%;
     margin-block: 2.4rem;
     border: 0.1rem solid var(--secondary-color);
+}
+
+section.plans div.container-content-cards-plans .card-plan details.benefits-plan {
+    cursor: pointer;
 }
 
 section.plans div.container-content-cards-plans .card-plan details.benefits-plan ul.list-content-benefits li {

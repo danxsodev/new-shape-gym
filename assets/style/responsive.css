@@ -1,0 +1,30 @@
+@media (min-width: 769px) { 
+    
+    nav#navigation * {
+        visibility: initial;
+        display: initial;
+        opacity: initial;
+        flex-direction: initial;
+        position: initial;
+        font-size: initial;
+        font-weight: initial;
+        transform: initial;
+    }
+    
+    body header button#btn-burguer {
+        display: none;
+    }
+
+    body header nav .menu ul.menu-options {
+        display: none;    
+        padding-inline: 2.4rem;
+        
+    }
+
+    body header .menu ul.menu-options li a {
+        text-decoration: none;
+        font-size: 2.4rem;
+        margin-inline: 3.2rem;
+    }
+
+}

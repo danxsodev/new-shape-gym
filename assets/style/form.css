@@ -9,6 +9,8 @@
     --card-and-form-color: #E7E7E7;
     --input-color: #363636;
     --text-color: #262626;
+    --btn-submit-color: #B5D43B;
+    --text-btn-submit: #161616;
     --text-color-alternative: #E4E4E4;
     --height-header: 7.2rem;
 
@@ -88,10 +90,11 @@ input::placeholder {
     padding-inline: 2.4rem;
 }
 
-.btn-submit {
+.btn-submit, .btn-submit-calculate {
     width: min(24rem, 90%);
     height: 4rem;
-    background-color: var(--primary-color);
+    background-color: var(--btn-submit-color);
+    color: var(--text-);
     border: none;
     border-radius: 1rem;
     font-weight: 600;

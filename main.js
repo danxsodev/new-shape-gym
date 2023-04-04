@@ -27,13 +27,58 @@ function openMenu(event) {
 buttonBurger.addEventListener("click", openMenu);
 buttonBurger.addEventListener("touchstart", openMenu);
 
-let currentImageIndex = 0;
-let images = document.querySelectorAll(".slideshow img");
-setInterval(function() {
-    images[currentImageIndex].style.opacity=0;
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    images[currentImageIndex].style.opacity=1;
-}, 3000);
+const inputContainer = document.getElementById("theme");
+const rootElement = document.documentElement;
+
+const lightTheme = {
+    "--primary-color": "#B5D43B",
+    "--secondary-color": "#161616",
+    "--bg-color":"#D3D3D3",
+    "--stats-color":"#363636",
+    "--card-and-form-color": "#E7E7E7",
+    "--input-color":"#363636",
+    "--text-color":"#262626",
+    "--text-color-alternative":"#E4E4E4", 
+};
+
+const darkTheme = {
+    "--primary-color": "#161616",
+    "--secondary-color": "#B5D43B",
+    "--bg-color":"#161616",
+    "--stats-color":"#363636",
+    "--text-stats-color": "#B5D43B",
+    "--card-and-form-color": "#363636",
+    "--input-color":"#E9E9E9",
+    "--text-color":"#E6E6E6",
+    "--text-color-alternative":"#181818", 
+};
+
+inputContainer.addEventListener("change", function() {
+    const isChecked = inputContainer.checked
+
+    if (isChecked) {
+        changeTheme(darkTheme);
+        inputContainer.setAttribute("aria-checked", "true");
+        inputContainer.setAttribute("aria-label", "dark mode ativado");
+
+    } else  {
+        changeTheme(lightTheme);
+        inputContainer.setAttribute("aria-checked", "false");
+        inputContainer.setAttribute("aria-label", "light mode ativado");
+    }
+});
+
+function changeTheme(theme) {
+    for (let prop in theme) {
+        changePropery(prop, theme[prop])
+    }
+}
+
+function changePropery (property, value) {
+    rootElement.style.setProperty(property, value)
+}
+
+
 
 
 
