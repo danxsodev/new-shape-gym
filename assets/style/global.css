@@ -139,47 +139,46 @@ nav label  {
     display: none;
 }
 
-input#theme {
-    width: 4rem;
-    height: 2.7rem;
+input[type=checkbox] {
+    height: 0;
+    width: 0;
     visibility: hidden;
-    z-index: 10;
 }
 
 label {
-    width: 4rem;
-    height: 2.7rem;
-    border-radius: 10rem;
-    position: relative;
-    float: right;
-    text-indent: -9999rem;
-    background-color: gray;
     cursor: pointer;
-}
-
-label::after {
-    content: '';
-    width: 2rem;
+    width: 4rem;
     height: 2rem;
-    border-radius: 9rem;
-    position: absolute;
-    top: 0.2rem;
-    left: 0.2rem;
-    background-color: white;
-    transition: 300ms ease-in-out;
+    background: transparent;
+    display: block;
+    border-radius: 10rem;
+    border: 2px solid var(--secondary-color);
+    position: relative;
 }
 
-input#theme:checked + label {
-    background-color: blue;
+label:after {
+  content: "";
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: var(--secondary-color);
+  border-radius: 9rem;
+  transition: 0.3s;
+}   
+
+input:checked + label {
+    background: transparent;
 }
 
-input#theme:checked + label::after {
-    left: calc(100% - 0.5rem);
+input:checked + label:after {
+    left: calc(100% - 4px);
     transform: translateX(-100%);
 }
 
-label:active::after {
-    width: 4rem;
+label:active:after {
+    width: 10px;
 }
 
 button#btn-burguer {

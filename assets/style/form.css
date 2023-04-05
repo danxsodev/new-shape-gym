@@ -54,7 +54,7 @@ fieldset {
     align-items: center;
     border: none;
     gap: 4rem;
-    margin-block: 18rem;
+    margin-block: 40rem;
 }
 
 .input-name, .input-cpf, .input-phone, .input-mail, .input-password {
@@ -67,6 +67,7 @@ fieldset {
 .input-name svg, .input-cpf svg, .input-phone svg, .input-mail svg, .input-password svg {
     position: absolute;
     z-index: 5;
+    transform: translateX(30%);
 }
 
 .input-name svg path, .input-cpf svg path, .input-phone svg path, .input-mail svg path, .input-password svg path {
@@ -77,6 +78,7 @@ fieldset {
 input {
     width: min(24rem, 100%);
     height: 4rem;
+    padding-inline: 2.4rem;
     font-size: 1.6rem;
     color: var(--text-color-alternative);
     background-color: var(--input-color);
@@ -84,10 +86,6 @@ input {
     align-items: center;
     border-radius: 0.8rem;
     border: none;
-}
-
-input::placeholder {
-    padding-inline: 2.4rem;
 }
 
 .btn-submit, .btn-submit-calculate {

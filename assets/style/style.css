@@ -30,19 +30,18 @@ section.home h1 {
 
 section.home div.slideshow {
     width: 100%;
-    height: 100%;     
-    margin-top: 2.4rem;       
+    max-width: 1000rem;
+    height: 50%;     
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    
 }
 
 section.home div.slideshow img {
+    margin-top: calc(var(--height-header + 8rem));       
     max-width: 100%;
-    max-height: 100%;
-    display: flex;
+    max-height: auto;
     position: absolute;
     border-radius: 0.8rem;
     transition: opacity 200ms ease-out;
@@ -96,6 +95,7 @@ section.about div.container-content-stats .stat p{
 section.services {
     width: 100%;
     height: 100vh;
+    margin-bottom: 102rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,7 +146,7 @@ section.services div.container-content-cards-service .card-service img {
 section.plans {
     width: 100%;
     height: 100vh;
-    margin-block: 72rem;
+    margin-bottom: 140rem;
     display: flex;
     flex-direction: column;
     align-items: center;
