@@ -64,21 +64,16 @@ fieldset {
     align-items: center;
 }
 
-.input-name svg, .input-cpf svg, .input-phone svg, .input-mail svg, .input-password svg {
+.input-name i, .input-cpf i, .input-phone i, .input-mail i, .input-password i {
     position: absolute;
     z-index: 5;
-    transform: translateX(30%);
-}
-
-.input-name svg path, .input-cpf svg path, .input-phone svg path, .input-mail svg path, .input-password svg path {
-    stroke: var(--primary-color);
-    fill: var(--primary-color);
+    transform: translate(30%, -15%);
 }
 
 input {
     width: min(24rem, 100%);
-    height: 4rem;
-    padding-inline: 2.4rem;
+    height: 4.8rem;
+    padding-left: 4rem;
     font-size: 1.6rem;
     color: var(--text-color-alternative);
     background-color: var(--input-color);
@@ -86,6 +81,11 @@ input {
     align-items: center;
     border-radius: 0.8rem;
     border: none;
+}
+
+input[type="date" i], input[type="time" i] {
+    padding-right: 2rem;  
+    padding-left: 2.4rem;
 }
 
 .btn-submit, .btn-submit-calculate {
